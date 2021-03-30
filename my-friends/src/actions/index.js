@@ -3,7 +3,7 @@ export const DEACTIVATE_FRIENDS = 'DEACTIVATE_FRIENDS';
 export const DELETE_FRIENDS = 'DELETE_FRIENDS';
 export const BLOCK_FRIENDS = 'BLOCK_FRIENDS';
 
-//let id = 1;
+let id = 1;
 
 /*
 {
@@ -15,10 +15,11 @@ export const BLOCK_FRIENDS = 'BLOCK_FRIENDS';
 
 //esto recibe un objeto
 
-export const addfriends = (amigo) => {
+export const addFriends = (amigo) => {
     return {
         type: ADD_FRIENDS,
         payload: {
+            id: id++,
             name: amigo.name,
             phone: amigo.phone,
             email: amigo.email,
